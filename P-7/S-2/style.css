@@ -1,0 +1,274 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f1f5f9;
+    color: #263445;
+}
+
+/* Header */
+header {
+    background: #183b65;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+header h1 {
+    margin-bottom: 8px;
+}
+
+/* Login page */
+.login-container {
+    min-height: 75vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+}
+
+.login-card {
+    background: white;
+    width: 100%;
+    max-width: 400px;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.login-card h2 {
+    text-align: center;
+    color: #183b65;
+    margin-bottom: 10px;
+}
+
+.login-card p {
+    text-align: center;
+    margin-bottom: 15px;
+    color: #64748b;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin: 12px 0 6px;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+button {
+    width: 100%;
+    background: #1769aa;
+    color: white;
+    border: none;
+    padding: 12px;
+    margin-top: 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background: #104d80;
+}
+
+.demo {
+    background: #eaf2f8;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 7px;
+}
+
+.demo h3 {
+    margin-bottom: 8px;
+    color: #183b65;
+}
+
+.demo p {
+    margin-bottom: 5px;
+}
+
+/* Dashboard header */
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 8px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+nav .logout {
+    background: #c0392b;
+    padding: 9px 14px;
+    border-radius: 5px;
+}
+
+/* Dashboard */
+.dashboard {
+    max-width: 1000px;
+    margin: 35px auto;
+    padding: 20px;
+}
+
+.dashboard h2 {
+    color: #183b65;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #64748b;
+    margin-bottom: 25px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+}
+
+.card h3 {
+    color: #1769aa;
+    margin-bottom: 12px;
+}
+
+.card p {
+    font-size: 18px;
+}
+
+.present {
+    color: #16803c;
+    font-weight: bold;
+}
+
+/* Attendance table */
+.attendance {
+    margin-top: 35px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    overflow-x: auto;
+}
+
+.attendance h2 {
+    margin-bottom: 15px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 13px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background: #183b65;
+    color: white;
+}
+
+/* Profile */
+.profile {
+    max-width: 650px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.profile h2 {
+    color: #183b65;
+    margin-bottom: 20px;
+}
+
+.profile-card {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+}
+
+.profile-card h3 {
+    color: #1769aa;
+    margin-bottom: 15px;
+}
+
+.profile-card p {
+    margin: 12px 0;
+}
+
+.button {
+    display: inline-block;
+    background: #1769aa;
+    color: white;
+    text-decoration: none;
+    padding: 11px 18px;
+    border-radius: 6px;
+    margin-top: 20px;
+}
+
+.button:hover {
+    background: #104d80;
+}
+
+.error-message {
+    color: #b42318;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+    background: #183b65;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+/* Responsive design */
+@media (max-width: 700px) {
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard-header {
+        flex-direction: column;
+    }
+
+    nav {
+        margin-top: 10px;
+    }
+
+    .dashboard {
+        margin: 15px auto;
+    }
+}

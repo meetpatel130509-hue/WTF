@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Central City Library</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav class="navbar">
+<div class="logo">
+<span> </span> Central City✦
+<small>LIBRARY</small>
+</div>
+<div class="nav-links">
+
+<button onclick="showPage('home')">Home</button>
+<button onclick="showPage('resources')">Books</button>
+<button onclick="showPage('about')">About</button>
+<button class="login-btn" id="navLogin" onclick="showPage('login')">Member
+Login ↗</button>
+<button id="navLogout" onclick="logout()" style="display:none">Logout
+↗</button>
+</div>
+</nav>
+<!-- HOME PAGE -->
+<section id="home" class="page active">
+<div class="hero">
+<div>
+<span class="tag"> YOUR KNOWLEDGE DESTINATION</span✦ >
+<h1>Where every page<br>opens a <span>new world.</span></h1> <p>
+Discover ideas, explore knowledge and find inspiration.
+Your university library is now just one click away.
+</p>
+<button class="primary" onclick="openLibrary()">Explore the
+Library →</button>
+<button class="secondary" onclick="showPage('about')">Discover
+More</button>
+<div class="stats">
+<div><strong>10,000+</strong><small>Books &
+Resources</small></div>
+<div><strong>500+</strong><small>Research
+Journals</small></div>
+<div><strong>24/7</strong><small>Digital
+Access</small></div>
+</div>
+</div>
+<div class="hero-art">
+<div class="circle"></div>
+<div class="hero-book book-a">THE ART<br>OF<br>THINKING</div>
+<div class="hero-book book-b">SCIENCE<br>& DISCOVERY</div>
+<div class="hero-book book-c">THE<br>UNIVERSE</div>
+
+</div>
+</div>
+<div class="section" id="about">
+<div class="section-title">
+<span class="tag">WHY OUR LIBRARY?</span>
+<h2>More than just books.</h2>
+<p>A space designed to help curious minds learn and grow.</p>
+</div>
+<div class="features">
+<div class="feature">
+<div class="feature-icon"> </div⌕ >
+<h3>Explore Resources</h3>
+<p>Discover books, journals and digital study materials.</p>
+</div>
+<div class="feature">
+<div class="feature-icon">♧</div>
+<h3>Member Access</h3>
+<p>Enjoy a personalized experience through your account.</p>
+</div>
+<div class="feature">
+<div class="feature-icon"> </div✧ >
+<h3>Learn Anytime</h3>
+<p>Access your digital library resources whenever you need
+them.</p> </div>
+</div>
+</div>
+<div class="cta">
+<span class="tag">YOUR NEXT CHAPTER STARTS HERE</span>
+<h2>Ready to explore?</h2>
+<p>Sign in and discover your digital library.</p>
+<button onclick="showPage('login')">Enter Library →</button>
+</div>
+</section>
+<!-- LOGIN PAGE -->
+<section id="login" class="page">
+<div class="login-area">
+<div class="login-info">
+
+<span class="tag"> WELCOME BACK</span✦ > <h1>Your
+journey<br>to knowledge<br><span>continues
+here.</span></h1>
+<p>
+Sign in to discover a world of books, research and
+endless possibilities.
+</p>
+</div>
+<div class="login-card">
+<h2>Member Login</h2>
+<p>Welcome to your library portal.</p> <div
+class="error" id="error">
+Invalid username or password!
+</div>
+<form onsubmit="login(event)">
+<label>Username</label>
+<input type="text" id="username" placeholder="Enter your
+username" required> <label>Password</label>
+<input type="password" id="password" placeholder="Enter your
+password" required>
+<button class="primary" type="submit">Sign In →</button>
+</form>
+<div class="demo">
+<b>DEMO ACCOUNT</b>
+<p>Username: <strong>student</strong></p>
+<p>Password: <strong>library123</strong></p>
+</div>
+</div>
+</div>
+</section>
+<!-- DASHBOARD -->
+<section id="dashboard" class="page">
+<div class="dashboard">
+<div class="welcome">
+<span class="tag">YOUR PERSONAL LIBRARY</span>
+<h1 id="welcomeName">Welcome back!</h1>
+<p>Your next great discovery is waiting for you.</p>
+</div>
+
+<div class="dashboard-heading">
+<span class="tag">OVERVIEW</span>
+<h2>Your Library Space</h2>
+</div>
+<div class="dashboard-grid">
+<div class="stat-card">
+<span>▤</span>
+<h3>10,000+</h3>
+<p>Available Books</p>
+</div>
+<div class="stat-card">
+<span>▧</span>
+<h3>500+</h3>
+<p>Research Journals</p>
+</div>
+<div class="stat-card">
+<span> </span✧ >
+<h3>24/7</h3>
+<p>Digital Resources</p>
+</div>
+</div>
+<div class="quick">
+<h3>Quick Access</h3>
+<button onclick="showPage('resources')">📚&nbsp; Browse Books
+→</button>
+<button onclick="showPage('resources')">📖&nbsp; Study
+Materials →</button>
+<button onclick="showPage('resources')">🔬&nbsp; Research
+Journals →</button>
+</div>
+</div>
+</section>
+<!-- BOOK RESOURCES -->
+<section id="resources" class="page">
+<div class="resources">
+<div class="resources-title">
+<span class="tag">THE DIGITAL COLLECTION</span>
+<h1>Explore the <span
+
+style="color:#7963b8">collection.</span></h1>
+<p>Find knowledge, inspiration and your next great read.</p>
+</div>
+<input type="search"
+class="search"
+id="search"
+placeholder=" Search books or categories..."⌕ oninput="searchBooks()"
+>
+<div class="book-grid" id="bookGrid">
+<div class="book-card" data-search="the art of thinking
+philosophy">
+<div class="cover cover1">THE ART<br>OF THINKING</div>
+<div class="book-details">
+<span class="category">Philosophy</span>
+<h3>The Art of Thinking</h3>
+<p>Explore ideas, logic and critical thinking.</p>
+<span class="available">● Digital resource</span>
+</div>
+</div>
+<div class="book-card" data-search="introduction to algorithms technology">
+<div class="cover cover2">INTRODUCTION<br>TO
+ALGORITHMS</div>
+<div class="book-details">
+<span class="category">Technology</span>
+<h3>Introduction to Algorithms</h3>
+<p>Discover computer science and algorithms.</p>
+<span class="available">● Digital resource</span>
+</div>
+</div>
+<div class="book-card" data-search="universe science">
+<div class="cover cover3">THE<br>UNIVERSE</div>
+<div class="book-details">
+<span class="category">Science</span>
+<h3>The Universe Around Us</h3>
+<p>Discover the wonders of the universe.</p>
+<span class="available">● Digital resource</span>
+</div>
+
+</div>
+<div class="book-card" data-search="brief history time
+physics">
+<div class="cover cover4">A BRIEF<br>HISTORY<br>OF
+TIME</div>
+<div class="book-details">
+<span class="category">Physics</span>
+<h3>A Brief History of Time</h3>
+<p>Explore space, time and cosmology.</p>
+<span class="available">● Digital resource</span>
+</div>
+</div>
+<div class="book-card" data-search="atomic habits personal growth">
+<div class="cover cover5">ATOMIC<br>HABITS</div>
+<div class="book-details">
+<span class="category">Personal Growth</span>
+<h3>Atomic Habits</h3>
+<p>Learn about building positive habits.</p>
+<span class="available">● Digital resource</span>
+</div>
+</div>
+<div class="book-card" data-search="clean code programming">
+<div class="cover cover6">CLEAN<br>CODE</div>
+<div class="book-details">
+<span class="category">Programming</span>
+<h3>Clean Code</h3>
+<p>Explore readable and maintainable software.</p>
+<span class="available">● Digital resource</span>
+</div>
+</div>
+</div>
+<p id="noResults"
+style="display:none;text-align:center;margin:30px;color:#858297"> No
+matching books found.
+</p>
+</div>
+</section>
+<footer>
+
+<h3> Central City Library</h✦ 3>
+<p>A world of knowledge, one page at a time.</p>
+<p>© 2026 Central City Library. All rights reserved.</p>
+</footer>
+<script src="server.js" defer></script>
+</body>
+</html>
